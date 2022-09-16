@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        *{padding:0;margin:0;border:0;}
+        *,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;}
+        :focus,:active{outline:none;}
+        a:focus,a:active{outline:none;}
+        nav,footer,header,aside{display:block;}
+        html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+        input,button,textarea{font-family:inherit;}
+        input::-ms-clear{display:none;}
+        button{cursor:pointer;}
+        button::-moz-focus-inner{padding:0;border:0;}
+        a,a:visited{text-decoration:none;}
+        a:hover{text-decoration:none;}
+        ul li{list-style:none;}
+        img{vertical-align:top;}
+        h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
+        body {
+            background-color: #05CBA7;
+        }
+        .cardContainer {
+            margin: 10px auto;
+            width: 440px;
+            height: 600px;
+            border: 1px solid #1F354C;
+            border-top: none;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+        .check {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .check > i {
+            font-size: 35px;
+            color: #66B4FF;
+        }
+        .cardContainer > h4, h1, h3 {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .location > i {
+            padding: 0px 5px 0px 0px;
+        }
+        .location{
+            padding: 30px 0px 0px 0px;
+            font-size: 16px;
+        }
+        .photoContainer {
+            width: 242px;
+            height: 242px;
+            border: 2px solid #E0E1E5;
+            background-color: #f8faf698;
+            border-radius: 50%;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .photo {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            border: 2px solid #E0E1E5;
+        }
+        .userName {
+            font-size: 36px;
+        }
+        .userInfo {
+            padding: 10px 15px;
+            font-weight: 600;
+            font-size: 16px;
+        }
+        .btn {
+            width: 150px;
+            height: 60px;
+            background-color: #66B4FF;
+            border-radius: 10px;
+            font-size: 25px;
+            display: inline-block;
+            border: none;
+            transition: all 0.5s;
+            cursor: pointer;
+        }
+        .btn span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+        .btn span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+        .btn:hover span {
+            padding-right: 25px;
+        }
+        .btn:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+        a {
+            outline: none;
+            color: #FFFFFF;
+        }
+        .footContainer {
+            height: 85px;
+            width: 100%;
+            background-color: #284058;
+            display: flex;
+            flex-direction: row;
+            align-content: flex-start;
+            justify-content: space-between;
+            align-items: stretch;
+        }
+        .footBlock {
+            flex-basis: 33%;
+            background-color: #1F354C;
+            display: flex;
+            flex-direction: row;
+            align-content: flex-start;
+            justify-content: center;
+            align-items: center;
+        }
+        .footBlock i {
+            font-size: 30px;
+            color: #BC8C9A;
+            padding: 1px 5px 1px 5px;
+        }
+        .footBlock h4 {
+            color: #BC8C9A;
+            font-size: 16px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .footBlock p {
+            color: white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 14px;
+        }
+        .footBlockGroup {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+    <title>Vovka Webdev</title>
+</head>
+<body>
+    <div class="cardContainer">
+        <div class="check"><i class="fa-solid fa-circle-check"></i></div>
+        <h4 class="location"><i class="fa-solid fa-location-arrow"></i>New York City, NY</h4>
+        <div class="photoContainer"><img class="photo" src="./photoVovka.webp" alt="photo"></div>
+        <h1 class="userName">Vovka Webdev</h1>
+        <h3 class="userInfo">Vovka was born somewhere in a cartoon, the main goal in life is to do nothing to do nothing</h3>
+        <button class="btn"><a href="#"><span>Follow</span></a></button>
+        <div class="footContainer">
+            <div class="footBlock">
+                <i class="fa-solid fa-image"></i>
+                <div class="footBlockGroup">
+                    <h4>Posts</h4>
+                    <p>635</p>
+                </div>
+            </div>
+            <div class="footBlock">
+                <i class="fa-solid fa-heart"></i>
+                <div class="footBlockGroup">
+                    <h4>Favorites</h4>
+                    <p>3,472</p>
+                </div>
+            </div>
+            <div class="footBlock">
+                <i class="fa-solid fa-comment-dots"></i>
+                <div class="footBlockGroup">
+                    <h4>Messages</h4>
+                    <p>1,293</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/699750a11c.js" crossorigin="anonymous"></script>
+</body>
+</html>
